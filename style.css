@@ -1,1 +1,157 @@
 
+
+/* Global variables and reset */
+:root{
+	--bg: #0f172a; /* deep background for contrast */
+	--card-bg: #0b1220;
+	--accent-1: #5b21b6; /* purple */
+	--accent-2: #06b6d4; /* teal */
+	--muted: rgba(255,255,255,0.75);
+	--glass: rgba(255,255,255,0.06);
+	--radius: 12px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg, #071022 0%, #071b2a 100%);
+	color: #e6eef8;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+/* Headings use a stronger geometric sans similar to the reference */
+h1,h2,h3,h4{font-family:'Montserrat', 'Inter', sans-serif;margin:0}
+
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Header / nav */
+.nav{background:transparent;padding:18px 0}
+.nav__inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent-2);font-size:1.15rem}
+.nav__menu a{color:var(--muted);margin-left:18px;text-decoration:none}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn--primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:white;box-shadow:0 6px 18px rgba(6,182,212,0.12)}
+.btn--secondary{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--muted)}
+.btn--ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+/* Hero */
+.hero{padding:64px 0}
+.hero__inner{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center}
+.hero__title{font-size:2.6rem;line-height:1.02;margin-bottom:12px;color:#fff}
+.hero__lead{color:rgba(255,255,255,0.82);margin-bottom:20px;font-size:1.05rem}
+.hero__actions .btn{margin-right:12px}
+
+.hero__visual{display:flex;justify-content:center}
+.mockup{width:100%;max-width:420px}
+.mockup__svg{width:100%;height:auto;border-radius:16px;display:block;filter:drop-shadow(0 10px 40px rgba(11,18,32,0.6))}
+
+/* Sections */
+.section{padding:48px 0}
+.section--light{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:var(--glass);padding:20px;border-radius:12px;text-align:center}
+
+/* Footer */
+.footer{padding:28px 0;text-align:center;color:rgba(255,255,255,0.6)}
+
+/* Responsive */
+@media (max-width:900px){
+	.hero__inner{grid-template-columns:1fr;gap:28px;text-align:center}
+	.hero__title{font-size:2rem}
+	.grid{grid-template-columns:1fr}
+}
+
+/* Keep previous header img styles (if header.php is included elsewhere) */
+.site-header{text-align:center;padding:20px 0}
+.site-header__img{display:inline-block;max-width:100%;height:auto}
+
+/* Header (screenshot) specific styles */
+.site-top__bar{background:#fff;padding:10px 0;border-bottom:1px solid rgba(0,0,0,0.06)}
+.top__inner{display:flex;align-items:center;justify-content:space-between}
+.search{flex:0 0 auto;margin-right:18px}
+.search__btn{width:54px;height:54px;background:#1f7f73;border:none;border-radius:2px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.search__btn svg{width:20px;height:20px}
+
+.top-nav{flex:1 1 auto;text-align:center}
+.top-nav__list{list-style:none;display:inline-flex;align-items:center;gap:18px;padding:0;margin:0}
+.top-nav__list li{position:relative}
+.top-nav__list li + li::before{content:"›";position:absolute;left:-12px;top:50%;transform:translateY(-50%);color:#333;opacity:0.9;font-weight:600}
+.top-nav__list a{color:#0b1220;text-decoration:none;font-weight:600}
+.top-nav__list .top-nav__lang{font-style:italic;font-weight:400}
+
+.brand-logo{flex:0 0 auto;margin-left:18px}
+.brand-logo__box{width:92px;height:92px;background:#d73b2a;color:white;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:10px;font-weight:700;letter-spacing:1px}
+.brand-logo__box span{display:block;line-height:1;}
+
+/* decorative slashes to mimic the original visual rhythm */
+.brand-logo__box::after{content:"/////////////////";display:block;font-size:10px;opacity:0.85;line-height:0.9;margin-top:6px}
+
+.site-top__subbar{height:56px;background:#f5f5f5}
+
+/* Dropdown styles */
+.has-dropdown{position:relative}
+.has-dropdown .dropdown{position:absolute;top:110%;left:0;min-width:180px;background:#fff;border-radius:4px;padding:8px 0;box-shadow:0 8px 20px rgba(2,6,23,0.12);display:none;z-index:30}
+.has-dropdown .dropdown li{padding:0}
+.has-dropdown .dropdown a{display:block;padding:10px 16px;color:#0b1220;white-space:nowrap}
+.has-dropdown:hover > .dropdown{display:block}
+.has-dropdown.open > .dropdown{display:block}
+
+/* make top-nav text darker to match screenshot */
+.top-nav__list a{color:#111;}
+
+
+/* Responsive tweaks to keep layout tidy */
+@media (max-width:900px){
+	.top__inner{flex-direction:row;gap:12px}
+	.top-nav__list{gap:10px;font-size:0.95rem}
+	.brand-logo__box{width:72px;height:72px;padding:8px;font-size:0.9rem}
+}
+
+/* Landing hero specific styles */
+.home-hero{padding:60px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:start}
+.hero-card{position:relative;background-size:cover;background-position:center;border-radius:4px;overflow:hidden;padding-bottom:56%;box-shadow:0 6px 20px rgba(2,6,23,0.12)}
+.hero-card__bar{position:absolute;left:0;right:0;top:0;background:#1f7f73;color:#fff;padding:20px 28px;font-size:1.6rem;font-weight:700;text-align:center}
+.hero-card__search{position:absolute;left:36px;right:36px;bottom:36px}
+.search-label{display:inline-block;background:#c63b2a;color:#fff;padding:10px 16px;border-radius:2px;margin-bottom:8px;font-weight:600}
+.search-form{display:flex;background:#fff;border-radius:2px;overflow:hidden}
+.search-form input{flex:1;padding:18px 16px;border:0;font-size:1rem}
+.search-btn{background:#c63b2a;color:#fff;border:0;padding:0 26px;font-weight:700;cursor:pointer}
+
+.hero-right{position:relative}
+.side-image{display:block;max-width:100%;border:6px solid #fff;box-shadow:0 6px 20px rgba(2,6,23,0.08)}
+.news-card{position:absolute;left: -20px;bottom: -20px;background:rgba(31,127,115,0.95);color:#fff;padding:22px;border-radius:4px;max-width:320px}
+.news-card__kicker{font-size:0.9rem;opacity:0.9;margin-bottom:8px}
+.news-card__title{font-size:1.5rem;line-height:1.05;margin:0}
+
+@media (max-width:1000px){
+	.hero-grid{grid-template-columns:1fr;}
+	.hero-card{padding-bottom:46%}
+	.news-card{position:static;margin-top:18px}
+}
+
+/* Footer styles to match header/subbar look */
+.site-footer{background:#f5f5f5;border-top:1px solid rgba(0,0,0,0.06);padding:22px 0;margin-top:40px}
+.site-footer__inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-footer__links a{color:#0b1220;text-decoration:none;margin-right:12px;font-weight:600}
+.site-footer__copy{color:rgba(11,18,32,0.7)}
+
+@media (max-width:800px){
+	.site-footer__inner{flex-direction:column;align-items:flex-start}
+	.site-footer__links{margin-bottom:8px}
+}
+
+/* Laperello CTA button */
+.laperello-cta{padding:48px 0;display:flex;justify-content:center;background:transparent}
+.laperello-btn{background:#c63b2a;color:#fff;padding:18px 36px;border-radius:8px;font-size:1.25rem;font-weight:700;text-decoration:none;display:inline-block;box-shadow:0 12px 30px rgba(198,59,42,0.18);transition:transform .12s ease,box-shadow .12s ease}
+.laperello-btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(198,59,42,0.22)}
+
+@media (max-width:720px){
+	.laperello-cta{padding:28px 0}
+	.laperello-btn{width:100%;text-align:center;padding:14px 18px;font-size:1.05rem}
+}
+
+
