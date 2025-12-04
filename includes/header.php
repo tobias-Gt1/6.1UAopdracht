@@ -36,9 +36,7 @@
 
             <div class="brand-logo">
                 <div class="brand-logo__box" aria-hidden="true">
-                    <span>HET</span>
-                    <span>UTRECHTS</span>
-                    <span>ARCHIEF</span>
+                    <img src="assets/UA.png" alt="UA logo" class="brand-logo__img">
                 </div>
             </div>
         </div>
