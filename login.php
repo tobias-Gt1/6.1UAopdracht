@@ -43,18 +43,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: ' . $_SERVER['REQUEST_URI']);
         exit;
     }
-
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Utrechts Archief</title>
-    
-    <style>
 
+    <style>
         body {
             background: white;
             color: black;
@@ -71,15 +70,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             padding: 20px;
             border: 1px solid rgba(36, 112, 101, 0.4);
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        h2{
+        h2 {
             text-align: center;
             margin-top: 0;
         }
 
-        input[type="text"], input[type="password"] {
+        input[type="text"],
+        input[type="password"] {
             width: 300px;
             padding: 10px;
             margin-bottom: 12px;
@@ -100,9 +100,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         button:hover {
-            opacity: 0,9;
+            opacity: 0, 9;
         }
-        
+
         .error {
             color: red;
             text-align: center;
@@ -110,6 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     </style>
 </head>
+
 <body>
 
     <div class="login-box">
@@ -125,8 +126,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="password" name="password" placeholder="Wachtwoord" required>
             <button type="submit">Inloggen</button>
         </form>
-        </div>
-    
+    </div>
+
 </body>
+
 </html>
-    

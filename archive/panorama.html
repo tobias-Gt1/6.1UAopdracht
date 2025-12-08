@@ -146,7 +146,7 @@
             panorama.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
             links.forEach(function(x){ x.classList.remove('active'); });
             a.classList.add('active');
-            // if dropdown is open, close it
+            // als dropdown open is, sluit deze
             var dd = document.querySelector('.streets-dropdown');
             var toggle = document.querySelector('.streets-toggle');
             if(dd && toggle){ dd.hidden = true; toggle.setAttribute('aria-expanded','false'); }
@@ -159,10 +159,10 @@
         if(toggle && dropdown){
           toggle.addEventListener('click', function(e){
             var open = !(dropdown.hidden);
-            dropdown.hidden = open; // toggle
+            dropdown.hidden = open; // wissel (toggle)
             toggle.setAttribute('aria-expanded', String(!open));
           });
-          // close dropdown wnr clicking 
+          // sluit dropdown bij klikken buiten 
           document.addEventListener('click', function(e){
             if(!dropdown.hidden && !e.target.closest('.streets-dropdown-wrap')){
               dropdown.hidden = true; toggle.setAttribute('aria-expanded','false');

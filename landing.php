@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <title>Document</title>
 </head>
+
 <body>
     <?php include 'includes/header.php'; ?>
 
@@ -40,11 +42,6 @@
                         <img src="assets/Beeld08.png" alt="Afbeelding 3" class="side-slide" loading="lazy">
                         <img src="assets/Beeld09.png" alt="Afbeelding 4" class="side-slide" loading="lazy">
                     </div>
-
-                    <div class="news-card">
-                        <div class="news-card__kicker">Nieuws</div>
-                        <h3 class="news-card__title">Bijzondere aanwinst: Nieuw licht op de Pauluspoort</h3>
-                    </div>
                 </aside>
             </div>
         </section>
@@ -66,26 +63,30 @@
 
 
     <script>
-    // slideshow hero section
-    document.addEventListener('DOMContentLoaded', function(){
-        function startSlideshow(containerSel, slideSel, interval){
-            var container = document.querySelector(containerSel);
-            if(!container) return;
-            var slides = Array.from(container.querySelectorAll(slideSel));
-            if(!slides.length) return;
-            var current = 0;
-            slides.forEach(function(s,i){ if(i===0) s.classList.add('active'); else s.classList.remove('active'); });
-            setInterval(function(){
-                slides[current].classList.remove('active');
-                current = (current + 1) % slides.length;
-                slides[current].classList.add('active');
-            }, interval);
-        }
-        startSlideshow('.hero-slideshow', '.slide', 4500);
-        startSlideshow('.side-slideshow', '.side-slide', 3500);
-    });
+            // diavoorstelling (hero) sectie
+        document.addEventListener('DOMContentLoaded', function() {
+            function startSlideshow(containerSel, slideSel, interval) {
+                var container = document.querySelector(containerSel);
+                if (!container) return;
+                var slides = Array.from(container.querySelectorAll(slideSel));
+                if (!slides.length) return;
+                var current = 0;
+                slides.forEach(function(s, i) {
+                    if (i === 0) s.classList.add('active');
+                    else s.classList.remove('active');
+                });
+                setInterval(function() {
+                    slides[current].classList.remove('active');
+                    current = (current + 1) % slides.length;
+                    slides[current].classList.add('active');
+                }, interval);
+            }
+            startSlideshow('.hero-slideshow', '.slide', 4500);
+            startSlideshow('.side-slideshow', '.side-slide', 3500);
+        });
     </script>
 
     <?php include 'includes/footer.php'; ?>
 </body>
+
 </html>

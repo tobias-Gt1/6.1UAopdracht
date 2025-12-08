@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <link rel="landingpage" href="landing.php">
     <title>laperello</title>
 </head>
@@ -33,7 +33,7 @@
             </div>
             <h2>Panorama collectie</h2>
             <div class="panorama-grid">
-                <a href="panorama.php" class="panorama-card" title="Open panorama 1">
+                <a href="panorama_db.php" class="panorama-card" title="Open panorama 1">
                     <div class="panorama-card__thumb">
                         <img src="assets/Beeld02.png" alt="Panorama 1 thumbnail" loading="lazy">
                     </div>

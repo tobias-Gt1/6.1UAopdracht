@@ -17,21 +17,15 @@
             </div>
 
                         <nav class="top-nav" aria-label="Hoofdnavigatie">
-                                <ul class="top-nav__list">
-                                        <li class="has-dropdown">
-                                            <a href="#onderzoek">Onderzoek</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#collecties">Collecties</a></li>
-                                                <li><a href="#datasets">Datasets</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#ontdekken">Ontdekken</a></li>
-                                        <li><a href="#onderwijs">Onderwijs</a></li>
-                                        <li><a href="#vakgenoten">Vakgenoten</a></li>
-                                        <li><a href="#over-ons">Over ons</a></li>
-                                        <li><a href="#contact">Contact</a></li>
-                                        <li><a href="/en/" class="top-nav__lang">English</a></li>
-                                </ul>
+                            <ul class="top-nav__list">
+                                <li><a href="#onderzoek">Onderzoek</a></li>
+                                <li><a href="#ontdekken">Ontdekken</a></li>
+                                <li><a href="#onderwijs">Onderwijs</a></li>
+                                <li><a href="#vakgenoten">Vakgenoten</a></li>
+                                <li><a href="#over-ons">Over ons</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="/en/" class="top-nav__lang">English</a></li>
+                            </ul>
                         </nav>
 
             <div class="brand-logo">

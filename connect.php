@@ -11,5 +11,5 @@
     }
 
     // Connected bericht
-    $conn->set_charset("utf8"); // Set the character set to UTF-8
+    $conn->set_charset("utf8"); // Stel de tekenset in op UTF-8
     ?>
